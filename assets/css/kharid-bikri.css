@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost/test/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>kharid-bikri</title>
+	<link rel="stylesheet" type="text/css" href="./kharid-bikri_files/slick.css">
+	<link rel="stylesheet" type="text/css" href="./kharid-bikri_files/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="./kharid-bikri_files/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./kharid-bikri_files/styles.css">
+
+</head>
+<body>
+
+<header>
+<div class="default-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-2">
+        </div>
+
+</div></div></div></header>
+
+	<div class="navbar navbar-default navbar-fixed-top" id="topnav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="http://localhost/test/index.php" class="navbar-header">
+				<h2> kharidbikri.com</h2>
+				<p> You post,SELL &amp; They love,BUY.</p></a><p><a href="http://localhost/test/index.php" class="navbar-header">
+				</a>
+			</p></div>
+
+			<ul class="nav navbar-nav">
+				<li style="width:200px;left; top:10px;"><input type="text" class="form-control" id="search" name=""></li>
+				<li style="top:10px;left:5px;"><button class="btn btn-primary" id="search_btn" name=""><span class="glyphicon glyphicon-search"></span></button></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li id="shoppingcart" style="width:100px;left:-4px;"><a href="http://localhost/test/#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span>Cart <span class="badge" style="display: inline-block;">0
+</span>	</a>
+					<div class="dropdown-menu" style="width: 400px;">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-md-3">S. No.</div>
+									<div class="col-md-3">Product Image</div>
+									<div class="col-md-3">Product Name</div>
+									<div class="col-md-3">Price in Rs.</div>
+								</div>
+							</div>
+							<div class="panel-body"></div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</li>
+				<li><a href="http://localhost/test/#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Sign In</a>
+					<ul class="dropdown-menu">
+					<div style="width: 200px;">
+						<div class="panel panel-primary">
+							<div class="panel-heading">Login</div>
+							<div class="panel-heading">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email">
+								<label for="email">Password</label>
+								<input type="password" class="form-control" id="password">
+								<p><br></p>
+								<a href="http://localhost/test/#" style="color: white;list-style-type: none;">Forgot Password?</a>
+								<input type="submit" class="btn btn-success" style="float: right;bottom:12px;" id="login" value="Login" name="">
+							</div>
+							<div class="panel-footer" id="e_msg"></div>
+						</div>
+					</div>
+				</ul>
+
+				</li><li><a href="http://localhost/test/customer_registration.php">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>
+		<br><br><br>
+	<!-- Slider Begins -->
+
+	 <div class="one-time slick-initialized slick-slider">
+	    
+		<div aria-live="polite" class="slick-list draggable" style="height: 300px;"><div class="slick-track" style="opacity: 1; width: 746px; transform: translate3d(0px, 0px, 0px);" role="listbox"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 746px;"><img src="./kharid-bikri_files/car2.jpg"></div></div></div>
+  	</div>
+	&gt;
+
+	<!-- Slider ends -->
+
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+			<div id="get_cat"><div class="nav nav-pills nav-stacked">
+					<li class="active"><a href="http://localhost/test/#"><h4>Categories</h4></a></li><li><a href="http://localhost/test/#" class="category" cid="1">Electronic gadgets</a></li><li><a href="http://localhost/test/#" class="category" cid="5">Home Appliances</a></li><li><a href="http://localhost/test/#" class="category" cid="6">Sports</a></li><li><a href="http://localhost/test/#" class="category" cid="7">Furniture</a></li><li><a href="http://localhost/test/#" class="category" cid="9">Books</a></li><li><a href="http://localhost/test/#" class="category" cid="10">Antiques</a></li><li><a href="http://localhost/test/#" class="category" cid="11">Vehicles</a></li></div>
+</div>
+				<!--<div class="nav nav-pills nav-stacked">
+					<li class="active"><a href="#"><h4>Categories</h4></a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+				</div>-->
+				<div id="get_brand"><div class="nav nav-pills nav-stacked">
+					<li class="active"><a href="http://localhost/test/#"><h4>Brands</h4></a></li><li><a href="http://localhost/test/#" class="brand" bid="1">HP</a></li><li><a href="http://localhost/test/#" class="brand" bid="2">Samsung</a></li><li><a href="http://localhost/test/#" class="brand" bid="3">Apple</a></li><li><a href="http://localhost/test/#" class="brand" bid="4">Sony</a></li><li><a href="http://localhost/test/#" class="brand" bid="5">LG</a></li><li><a href="http://localhost/test/#" class="brand" bid="6">Biba</a></li><li><a href="http://localhost/test/#" class="brand" bid="7">Flying Machine</a></li><li><a href="http://localhost/test/#" class="brand" bid="8">Nike</a></li><li><a href="http://localhost/test/#" class="brand" bid="9">Adidas</a></li><li><a href="http://localhost/test/#" class="brand" bid="10">Kidzee</a></li><li><a href="http://localhost/test/#" class="brand" bid="11">Ikea</a></li><li><a href="http://localhost/test/#" class="brand" bid="12">Philips</a></li></div>
+</div>
+				<!--<div class="nav nav-pills nav-stacked">
+					<li class="active"><a href="#"><h4>Brands</h4></a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Categories</a></li>
+				</div>-->
+			</div>
+			<div class="col-md-8">
+			<div class="row">
+					<div class="col-md-12" id="cartmsg">
+
+					</div>
+				</div>
+				<div class="panel panel-info">
+					<div class="panel-heading text-center">--Featured Products--
+						<div class="pull-right">
+								Sort: &nbsp;&nbsp;&nbsp;<a href="http://localhost/test/#" id="price_sort">Price</a> | <a href="http://localhost/test/#" id="pop_sort">Popularity</a> | <a href="http://localhost/test/#" id="loc_sort">Location</a> | <a href="http://localhost/test/#" id="prod_sort">Product</a>
+							</div>
+					</div>
+					<div class="panel-body">
+					<div id="get_product"><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">Samsung Duos 2</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="1">
+									<img src="./kharid-bikri_files/samsungduos.JPG" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 5000
+								<button pid="1" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="1" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">iPhone 5s</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="2">
+									<img src="./kharid-bikri_files/iphonemobile.JPG" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 25000
+								<button pid="2" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="2" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">iPad</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="3">
+									<img src="./kharid-bikri_files/iPad.jpg" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 30000
+								<button pid="3" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="3" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">Samsung Tab</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="4">
+									<img src="./kharid-bikri_files/samsungtab.JPG" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 10000
+								<button pid="4" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="4" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">Sony Vaio Laptop</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="5">
+									<img src="./kharid-bikri_files/vaio.JPG" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 25000
+								<button pid="5" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="5" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div><div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">LG Aqua 2</div>
+								<div class="panel-body">
+								<a href="http://localhost/test/#" class="imageproduct" pid="6">
+									<img src="./kharid-bikri_files/lgaqua.JPG" style="width:200px; height:250px;">
+								</a>
+								</div>
+								<div class="panel-heading">Rs 15000
+								<button pid="6" class="quicklook btn btn-danger btn-xs" style="float:right;">Quick look</button>&nbsp;
+								<button pid="6" class="product btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div></div>
+</div>
+						<!--<div class="col-md-4">
+							<div class="panel panel-info">
+								<div class="panel-heading">Samsung Galaxy</div>
+								<div class="panel-body"><img src="assets/prod_images/samsung_galaxy.jpg"></div>
+								<div class="panel-heading">$500.00
+								<button class="btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
+								</div>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<center>
+					<ul class="pagination" id="pageno">
+				<li><a href="http://localhost/test/#" page="1" class="page">1</a></li>
+			
+				<li><a href="http://localhost/test/#" page="2" class="page">2</a></li>
+			
+				<li><a href="http://localhost/test/#" page="3" class="page">3</a></li>
+			
+</ul>
+				</center>
+			</div>
+
+			<!-- Modal -->
+
+				<div class="modal fade" id="prod_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+				      </div>
+				      <div class="modal-body" id="dynamic_content">
+				        ...
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			 <!-- Modal ends-->
+		</div>
+	</div>
+
+
+
+
+	<script src="./kharid-bikri_files/jquery.min.js.download"></script>
+	<script type="text/javascript" src="./kharid-bikri_files/jquery-migrate-1.2.1.min.js.download"></script>
+  	<script type="text/javascript" src="./kharid-bikri_files/slick.min.js.download"></script>
+	<script src="./kharid-bikri_files/bootstrap.min.js.download"></script>
+	<script src="./kharid-bikri_files/main.js.download"></script>
+
+
+<div class="foot">
+	<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+      
+	  
+
+        <div class="col-md-6">
+         
+          <ul>
+
+        
+          <li><a href="http://localhost/test/page.php?type=aboutus">About Us</a></li>
+            <li><a href="http://localhost/test/page.php?type=faqs">FAQs</a></li>
+            <li><a href="http://localhost/test/page.php?type=privacy">Privacy</a></li>
+          <li><a href="http://localhost/test/page.php?type=terms">Terms of use</a></li>
+               <li><a href="http://localhost/test/admin/">Admin Login</a></li>
+          </ul>
+        </div>
+  
+        
+          <h5>Stay Connected With Us</h5>
+          <div class="newsletter-form">
+            <form method="post">
+              <div class="form-group">
+                <input type="email" name="subscriberemail" class="form-control newsletter-input" required="" placeholder="Enter Email Address">
+              </div>
+              <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+            </form>
+            <p class="subscribed-text">*We send great deals to our subscribed users very week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer></div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-push-6 text-right">
+          <div class="footer_widget">
+            
+          </div>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <p class="copy-right">Copyright © 2019 kharidbikri.com Online Buying and Selling Store. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<style> .foot{text-align: center;}
+</style>
+
+</body></html>
