@@ -36,12 +36,12 @@
 			</div>
 
 			<ul class="nav navbar-nav">
-				<li style="width:200px;left; top:10px;"><input type="text" class="form-control" id="search" name=""></li>
-				<li style="top:10px;left:10px;"><button class="btn btn-primary" id="search_btn" name=""><span class='glyphicon glyphicon-search'></span></button></li>
+				<li style="width:200px;left:20px; top:10px;"><input type="text" class="form-control" id="search" name=""></li>
+				<li style="width: 10px;top:10px;left:100px;"><button class="btn btn-primary" id="search_btn" name=""><span class='glyphicon glyphicon-search'></span></button></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li id='shoppingcart' style="width:100px;left:-4px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart" ></span>Cart <span class="badge">0</span>	</a>
+				
 					<div class="dropdown-menu" style="width: 400px;">
 						<div class="panel panel-success">
 							<div class="panel-heading">
@@ -58,6 +58,9 @@
 					</div>
 				</li>
 				<li><a href="aboutus.php" ><span class="glyphicon glyphicon-user"></span>About us</a>
+				<li><a href="FAQs.php" ><span class="glyphicon glyphicon-user"></span>FAQs</a>
+				<li><a href="terms.php" ><span class="glyphicon glyphicon-user"></span>Terms & Conditions</a>
+				
 				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Sign In</a>
 				
 					<ul class="dropdown-menu">
@@ -233,7 +236,7 @@
           </div>
         </div>
         <div class="col-md-6 col-md-pull-6">
-          <p class="copy-right">Copyright &copy; 2019 kharidbikri.com Online Buying and Selling Store. All Rights Reserved</p>
+          <p class="copy-right">Copyright &copy; 2019 kharidbikri.com Online Buying and Selling Store. All Rights Reserved.</p>
         </div>
       </div>
     </div>

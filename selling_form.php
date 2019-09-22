@@ -1,7 +1,3 @@
-<?php
- include 'functions.php';
- include 'admin/db.php';
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +30,7 @@
 				<div class="panel panel-primary">
 					<div class="panel-heading">Selling Form</div>
 					<div class="panel-body">
-				<form method="post" action="" enctype="multipart/form-data" >
+				<form method="post" action="register.php">
 					<div class="row">
 					
 					<div class="col-md-8" style="padding-right: 10px;">
@@ -46,20 +42,29 @@
 						<div class="col-md-8">
 							<label for="p_cat">Product Category</label>
 							<select  id="p_cat" name="p_cat" class="form-control">
-								    <?php
-										
-										cat_list();
- 										?>
+								<option>Electronics</option>
+								<option>Ladies Wear</option>
+								<option>Men's Wear</option>
+								<option>Kids Wear</option>
+								<option>Home Appliances</option>
+								<option>Sports</option>
 							</select>
 						</div>
 
 						<div class="col-md-8">
 							<label for="p_cat">Brand</label>
 							<select  id="p_brand" name="p_brand" class="form-control">
-								<!-- <option >565</option -->
-								  <?php
-										brand_list();
- 										?>							
+								<option>HP</option>
+								<option>Samsung</option>
+								<option>Apple</option>
+								<option>Sony</option>
+								<option>Biba</option>
+								<option>Flying Machine</option>
+								<option>Nike</option>
+								<option>Adidas</option>
+								<option>Kidzee</option>
+								<option>Ikea</option>
+								<option>Philips</option>
 							</select>
 						</div>
 					<div class="col-md-8">
@@ -70,74 +75,35 @@
 
 						<div class="col-md-8">
 							<label for="mobile"> Product Image</label>
-							<input type="file" id="p_image" name="p_image" class="form-control">
+							<input type="image" id="p_image" name="p_image" class="form-control">
 							
 						
 					</div>
 
-						<div class="col-md-8" >
+						<div class="col-md-8">
 							<label for="bought_from"> Description</label>
-							<input type="textarea" id="bought_from" name="p_desc" class="form-control">
+							<input type="textarea" id="bought_from" name="bought_from" class="form-control">
 						</div>
+						<br />
 
-						<div class="col-md-8"style="margin-top: 20px;">
-							<input type="submit" class="btn btn-primary" value="Submit" name="Submit" id="submit">
-	<input type="submit" class="btn btn-primary" value="Cancel" name="cancel" id="reset">
-</div>
+				<div class="row">
+					<div class="col-md-4">
+						
+					</div>
+					<div class="row">
+                    <div class="col-md-4">
+						
+					</div>
+				</div>
 					</form>
-
+					
 				
 			</div>
 			<div class="col-md-2"></div>
 		</div>
 	</div>
 
-<?php 
-					if(isset($_POST['Submit'])){
-						$p_name=$_POST['p_name'];
-						$p_brand=$_POST['p_brand'];
-						$p_cat=$_POST['p_cat'];
-						// $p_image=$_POST['p_image'];
-						$p_price=$_POST['p_price'];
-						$p_desc = $_POST['p_desc'];
-						$p_image = $_FILES["p_image"]["name"];
-						// echo $p_image.'<br>';
-						$upload_dir = "assets/prod_images/".basename($p_image);
-						echo $upload_dir;
-					
-						// get id form title
-						$p_cat_id= getcatid($p_cat);
-						$p_brand_id= getbrandid($p_brand);
 
-						  if(move_uploaded_file( $_FILES["p_image"]["tmp_name"],$upload_dir)){
-						  						
-						  						
-						  						$sql="INSERT INTO `products` (`product_cat`, `product_brand`, `product_title`, `product_price`, `product_desc`, `product_image`) VALUES ( '$p_cat_id', '$p_brand_id', '$p_name', '$p_price', '$p_desc', '$p_image');";
-						  						if($result=mysqli_query($con,$sql)){
-						  							echo "<script>alert('record added');</script>";
-						  						}else{
-						  							$error_msg =$mysqli_error($con);
-						  							echo "<script>alert('$error_msg');</script>";
-						  						}
-						  						}
-						  						else{
-						  							$error = $_FILES["p_image"]["error"];
-						  							echo "<script>alert('$error');</script>";
-						  						}
-
-
-						// echo "<script>alert('submit button clicked');</script>";
-						
-
-					}
-						if(isset($_POST['cancel'])){
-						// $sub=$_POST[''];
-						echo "<script>alert('cancel button clicked');</script>";
-
-					}
-
-					?>
-					
 
 
 
@@ -146,7 +112,8 @@
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script src="assets/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	<script src="main.js"></script>
-
+	<input type="button" class="btn btn-primary" value="Submit" name="Submit" id="submit">
+	<input type="button" class="btn btn-primary" value="Cancel" name="reset" id="reset">
 </body>
 <div class="foot"><footer>
 </footer></div>

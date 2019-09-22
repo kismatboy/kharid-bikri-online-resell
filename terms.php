@@ -2,16 +2,27 @@
 <html>
 <head>
 <title>Terms & Conditions</title>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.6-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<link REL="stylesheet" href="style.css" type="text/css">
+
 
 
 <body>
-<h1> Terms And Conditions</h1>
-<h3> Kharidbikri.com is developed we, the students of LA Grandee International College, Simalchaur Pokhara, BCA 6th Semester. Kharidbikri is an online buying and selling syestem. </h3>
-<p>This project entitled as "kharidbikri.com Online Buying and Selling System" is a system with main functionality to buy and sell products online. Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser. 
-This system is specially meant for the buying and selling of used goods thus it can also be considered as an online second hand market. The basic concept of buying and selling used items online is to allow sellers or merchants to place their ads on sale or services to be afforded by them. These ads can be seen by the other users and if they want to buy anything that is shown in the ads, they can contact the buyers. The vendor can post a 'for sale' ad for their used products and the system therefore must have "Product Condition" feature with its listed location.
-</p>
+<h1> <b>Terms And Conditions</b></h1>
+
+
+<h2> 1. We care for your security in online transactions. Your personal information will not be visible to other user and will be kept confidential.<br> 2. This system is just a platform for sellers to put ad for their products and a medium for the buyers to contact the sellers. <br> 3. The sellers will be able to contact you only if you send them a message via email. <br> We will not be responsible for the warranty and guarantee of the products you buy here. Also we do not take the responsibility to sell your product. <br> 4. We are still working on online payment system. So currently buying by online payment is unavailable. </h2><br><br>
+<h3> Thank you for choosing us. We, at kharidbikri.com, always look forward for any suggestions and feedbacks from our users.<h3>
+
 <img src=assets/images/logo2.jpg >
 </body>
+<div class="foot"> <a href="footer.php"/><footer>
+ <p>kharidbikri.com Online Buying and Selling System</p>
+ 
+</footer></div>
+<style> .foot{text-align: center;}
+</style>
 </html>
+
+

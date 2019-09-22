@@ -25,12 +25,15 @@
 
 			<ul class="nav navbar-nav">
 
-				<li style="width:200px;right:200px;top:10px;"><input type="text" class="form-control" id="search" name=""></li>
-				<li style="top:10px;right:200px;"><button class="btn btn-primary" id="search_btn" name=""><span class='glyphicon glyphicon-search'></span></button></li>
+				<li style="width:200px;right:350px;top:10px;"><input type="text" class="form-control" id="search" name=""></li>
+				<li style="top:10px;right:350px;"><button class="btn btn-primary" id="search_btn" name=""><span class='glyphicon glyphicon-search'></span></button></li>
+				<li><a href="aboutus.php" ><span class="glyphicon glyphicon-user"></span>About us</a>
+				<li><a href="FAQs.php" ><span class="glyphicon glyphicon-user"></span>FAQs</a>
+				<li><a href="terms.php" ><span class="glyphicon glyphicon-user"></span>Terms & Conditions</a>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li id='shoppingcart' style="width:100px;left:-4px;"><a id="carticon" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span>Cart <span class="badge">2</span>	</a>
+				
 				<li id='shoppingcart' style="width:100px;left:-4px;"><a id="carticon" href="selling_form.php" class="dropdown-toggle" data-toggle=""><span class="glyphicon glyphicon-shopping-cart"></span>Sell <span class="badge">2</span>	</a>
 					<div class="dropdown-menu" style="width: 400px;">
 						<div class="panel panel-success">
@@ -122,15 +125,7 @@
 					</div>
 					<div class="panel-body">
 					<div id="get_product"></div>
-						<!--<div class="col-md-4">
-							<div class="panel panel-info">
-								<div class="panel-heading">Samsung Galaxy</div>
-								<div class="panel-body"><img src="assets/prod_images/samsung_galaxy.jpg"></div>
-								<div class="panel-heading">$500.00
-								<button class="btn btn-danger btn-xs" style="float:right;">Add to Cart</button>
-								</div>
-							</div>
-						</div>-->
+						
 					</div>
 					<div class="panel-footer"> </div>
 				</div>

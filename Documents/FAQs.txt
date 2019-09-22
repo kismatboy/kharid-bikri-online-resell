@@ -1,7 +1,0 @@
-Here are some frequently asked questions that may help you to be familiar with Kharidbikri.com
-1.  How to login?
-Ans: If you are a new user, you need to register by clicking on the Signup option. Once you register yourself, you can then sign in/ log in by using the email address and password you provided for registration.
-2. How to put advertisement for  sale?
-Ans: For selling something you must be a registered user. Once you log in to your account, you can then click on the Sell option and fill the form as required.
-3. Can I buy directly from here?
-Ans: Currently we are working upon this feature. However you can get the contact details about the buyers if you want to buy something.

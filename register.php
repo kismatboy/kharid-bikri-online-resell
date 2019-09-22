@@ -51,7 +51,7 @@
 		exit();
 		}
 
-		if(!(strlen($mobile) < 10)){
+		if(!(strlen($mobile) == 10)){
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>

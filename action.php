@@ -80,7 +80,7 @@
 								</div>
 								<div class='panel-heading'>Rs $price
 								<button pid='$pro_id' class='quicklook btn btn-danger btn-xs' style='float:right;'>Quick look</button>&nbsp;
-								<button pid='$pro_id' class='product btn btn-danger btn-xs' style='float:right;'>Add to Cart</button>
+								
 								</div>
 							</div></div>";
 			}
@@ -122,7 +122,7 @@
 								<div class='panel-body' class='imageproduct' pid='$pro_id'><img src='assets/prod_images/$img' style='width:200px; height:250px;'></div>
 								<div class='panel-heading'>Rs $price
 								<button pid='$pro_id' class='quicklook btn btn-warning btn-xs' style='float:right;'>Quick look</button>&nbsp;
-								<button pid='$pro_id' class='product btn btn-danger btn-xs' style='float:right;'>Add to Cart</button>
+								<button pid='$pro_id' class='product btn btn-danger btn-xs' style='float:right;'>Buy?</button>
 								
 								</div>
 							</div></div>";
@@ -141,7 +141,7 @@
 			else{
 			$pid=$_POST['proId'];
 			$uid=$_SESSION['uid'];
-			$sql = "SELECT * FROM cart WHERE p_id = '$pid' AND user_id = '$uid'";
+			$sql = "SELECT * FROM sell WHERE p_id = '$pid' AND user_id = '$uid'";
 			$run_query=mysqli_query($conn,$sql);
 			$count=mysqli_num_rows($run_query);
 			if($count>0)
@@ -162,13 +162,13 @@
 				$pro_price = $row["product_price"];
 
 				
-				$sql="INSERT INTO cart(p_id,ip_add,user_id,product_title,product_image,qty,price,total_amount) VALUES('$pid','0.0.0.0','$uid','$pro_title','$pro_image','1','$pro_price','$pro_price')";
+				$sql="INSERT INTO sell(p_id,ip_add,user_id,product_title,product_image,qty,price,total_amount) VALUES('$pid','0.0.0.0','$uid','$pro_title','$pro_image','1','$pro_price','$pro_price')";
 				$run_query = mysqli_query($conn,$sql);
 				if($run_query){
 					echo "
 						<div class='alert alert-success' role='alert'>
   					<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-  					<strong>Success!</strong> Product added to cart!
+  					<strong>Success!</strong> Product added to sell!
 				</div>
 					";
 				}
@@ -177,10 +177,10 @@
 		}
 	
 
-	if(isset($_POST['cartmenu']) || isset($_POST['cart_checkout']))
+	if(isset($_POST['sellmenu']) || isset($_POST['sell_checkout']))
 	{
 		$uid=$_SESSION['uid'];
-		$sql="SELECT * FROM cart WHERE user_id='$uid'";
+		$sql="SELECT * FROM sell WHERE user_id='$uid'";
 		$run_query=mysqli_query($conn,$sql);
 		$count=mysqli_num_rows($run_query);
 		if($count>0){
@@ -199,7 +199,7 @@
 			$total_sum=array_sum($price_array);
 			$total_amt+=$total_sum;
 
-			if(isset($_POST['cartmenu']))
+			if(isset($_POST['sellmenu']))
 			{
 				echo "
 				<div class='row'>
@@ -226,7 +226,7 @@
 				";
 			}
 		}
-		if(isset($_POST['cart_checkout'])){
+		if(isset($_POST['sell_checkout'])){
 		echo "
 			<div class='row'>
 						<div class='col-md-8'></div>
@@ -243,13 +243,13 @@
 	{
 		$pid=$_POST['pid'];
 		$uid=$_SESSION['uid'];
-		$sql="DELETE FROM cart WHERE p_id='$pid' AND user_id='$uid'";
+		$sql="DELETE FROM sell WHERE p_id='$pid' AND user_id='$uid'";
 		$run_query=mysqli_query($conn,$sql);
 		if($run_query){
 			echo "
 				<div class='alert alert-danger' role='alert'>
   					<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-  					<strong>Success!</strong> Item removed from cart!
+  					<strong>Success!</strong> Item removed from sell!
 				</div>
 			";
 		}	
@@ -262,7 +262,7 @@
 		$qty=$_POST['qty'];
 		$price=$_POST['price'];
 		$total=$_POST['total'];
-		$sql="UPDATE cart SET qty='$qty', price='$price', total_amount='$total' WHERE p_id='$pid' AND user_id='$uid'";
+		$sql="UPDATE sell SET qty='$qty', price='$price', total_amount='$total' WHERE p_id='$pid' AND user_id='$uid'";
 		$run_query=mysqli_query($conn,$sql);
 		if($run_query){
 			echo "
@@ -275,10 +275,10 @@
 
 	}
 
-	if(isset($_POST['cartcount'])){
+	if(isset($_POST['sellcount'])){
 		if(!(isset($_SESSION['uid']))){echo "0";}else{
 		$uid=$_SESSION['uid'];
-		$sql="SELECT * FROM cart WHERE user_id='$uid'";
+		$sql="SELECT * FROM sell WHERE user_id='$uid'";
 		$run_query=mysqli_query($conn,$sql);
 		$count=mysqli_num_rows($run_query);
 		echo $count;
@@ -288,21 +288,21 @@
 
 	if(isset($_POST['payment_checkout'])){
 		$uid=$_SESSION['uid'];
-		$sql="SELECT * FROM cart WHERE user_id='$uid'";
+		$sql="SELECT * FROM sell WHERE user_id='$uid'";
 		$run_query=mysqli_query($conn,$sql);
 		$i=rand();
-		while($cart_row=mysqli_fetch_array($run_query))
+		while($sell_row=mysqli_fetch_array($run_query))
 		{
-			$cart_prod_id=$cart_row['p_id'];
-			$cart_prod_title=$cart_row['product_title'];
-			$cart_qty=$cart_row['qty'];
-			$cart_price_total=$cart_row['total_amount'];
+			$sell_prod_id=$sell_row['p_id'];
+			$sell_prod_title=$sell_row['product_title'];
+			$sell_qty=$sell_row['qty'];
+			$sell_price_total=$sell_row['total_amount'];
 
-			$sql2="INSERT INTO customer_order (uid,pid,p_name,p_price,p_qty,p_status,tr_id) VALUES ('$uid','$cart_prod_id','$cart_prod_title','$cart_price_total','$cart_qty','CONFIRMED','$i')";
+			$sql2="INSERT INTO customer_order (uid,pid,p_name,p_price,p_qty,p_status,tr_id) VALUES ('$uid','$sell_prod_id','$sell_prod_title','$sell_price_total','$sell_qty','CONFIRMED','$i')";
 			$run_query2=mysqli_query($conn,$sql2);
 		}
 		$i++;
-		$sql3="DELETE FROM cart WHERE user_id='$uid'";
+		$sql3="DELETE FROM sell WHERE user_id='$uid'";
 		$run_query3=mysqli_query($conn,$sql3);
 	}
 
@@ -328,11 +328,26 @@
 						<div class='row'> <div class='col-md-12'>Price:<h3 class='text-muted'>$price</h3></div></div>
 						<div class='row'> <div class='col-md-12'>Description:<h4 class='text-muted'>$desc</h4></div></div><br><br>
 						<div class='row'> <div class='col-md-12'>Tags:<h4 class='text-muted'>$tags</h4></div></div>
-						<button pid='$pro_id' class='product btn btn-danger'>Add to Cart</button>
+						<button pid='$pro_id' class='product btn btn-danger'>Buy?</button>
 					</div>
 				</div>
 		";
 	}
 
  ?>
+
+ <script type="text/javascript">
+ 	function test12(){
+ 		
+ 		// alert('test this');
+ 		document.getElementById("test12").style.display = "block";
+ 	}
+ </script>
+ <body>
+ 	
+
+ 	</div>
+ </body>
+
+ 
 
