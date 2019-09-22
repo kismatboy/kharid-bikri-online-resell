@@ -30,8 +30,8 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="index.php" class="navbar-header">
-				<h2> kharidbikri.com</h2>
-				<p> You post,SELL & They love,BUY.<p>
+				<div style="font-size: 20px;"><h2> kharidbikri.com</h2>
+				<p> You post,SELL & They love,BUY.</p></div>
 				</a>
 			</div>
 

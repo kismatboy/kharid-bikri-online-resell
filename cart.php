@@ -18,8 +18,6 @@
 			<div class="navbar-header">
 				<a href="index.php" class="navbar-brand">kharid-bikri.com</a>
 			</div>
-
-
 		</div>
 	</div>
 	<p><br><br></p>
@@ -45,23 +43,9 @@
 					</div>
 					<br><br>
 					<div id='cartdetail'>
-					<!--<div class="row">
-						<div class="col-md-2"><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
-						<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span></a>
-						</div>
-						<div class="col-md-2"><img src="assets/prod_images/tshirt.JPG" width="60px" height="60px"></div>
-						<div class="col-md-2">Tshirt</div>
-						<div class="col-md-2">$700</div>
-						<div class="col-md-2"><input class="form-control" type="text" size="10px" value='1'></div>
-						<div class="col-md-2"><input class="form-control" type="text" size="10px" value='700'></div>
-					</div>-->
+					
 					</div>
-					<!--<div class="row">
-						<div class="col-md-8"></div>
-						<div class="col-md-4">
-							<b>Total: $500000</b>
-						</div>
-					</div>-->
+					
 					<div class="panel-footer">
 
 					</div>

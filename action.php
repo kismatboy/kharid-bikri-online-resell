@@ -44,7 +44,6 @@
 		}
 	}
 	if(isset($_POST['getProduct'])){
-
 		$limit=	6;
 		if(isset($_POST['setPage'])){
 			$pageno=$_POST['pageNumber'];
@@ -69,7 +68,6 @@
 				$title=$row['product_title'];
 				$price=$row['product_price'];
 				$img=$row['product_image'];
-
 				echo "<div class='col-md-4'>
 							<div class='panel panel-info'>
 								<div class='panel-heading'>$title</div>
@@ -86,7 +84,6 @@
 			}
 		}
 	}
-
 	if(isset($_POST['get_selected_Category']) || isset($_POST['get_selected_brand']) || isset($_POST['search']) || isset($_POST['price_sorted']))
 	{
 		if(isset($_POST['get_selected_Category'])){
@@ -115,7 +112,6 @@
 				$title=$row['product_title'];
 				$price=$row['product_price'];
 				$img=$row['product_image'];
-
 				echo "<div class='col-md-4'>
 							<div class='panel panel-info'>
 								<div class='panel-heading'>$title</div>
@@ -128,9 +124,7 @@
 							</div></div>";
 		}
 		
-
 	}
-
 		if(isset($_POST['addToProduct'])){
 			if(!(isset($_SESSION['uid']))){echo "
 						<div class='alert alert-danger' role='alert'>
@@ -139,8 +133,12 @@
 				</div>
 					";}
 			else{
-			$pid=$_POST['proId'];
+				$pid=$_POST['proId'];
 			$uid=$_SESSION['uid'];
+				echo "<script>
+				 window.open('http://localhost/kharid-bikri/sendMailByClient.php?pid=$pid&uid=$uid','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes'); </script>";
+
+			
 			$sql = "SELECT * FROM sell WHERE p_id = '$pid' AND user_id = '$uid'";
 			$run_query=mysqli_query($conn,$sql);
 			$count=mysqli_num_rows($run_query);
@@ -160,7 +158,6 @@
 				$pro_title = $row["product_title"];
 				$pro_image = $row["product_image"];
 				$pro_price = $row["product_price"];
-
 				
 				$sql="INSERT INTO sell(p_id,ip_add,user_id,product_title,product_image,qty,price,total_amount) VALUES('$pid','0.0.0.0','$uid','$pro_title','$pro_image','1','$pro_price','$pro_price')";
 				$run_query = mysqli_query($conn,$sql);
@@ -176,7 +173,6 @@
 			}
 		}
 	
-
 	if(isset($_POST['sellmenu']) || isset($_POST['sell_checkout']))
 	{
 		$uid=$_SESSION['uid'];
@@ -198,7 +194,6 @@
 			$price_array=array($total);
 			$total_sum=array_sum($price_array);
 			$total_amt+=$total_sum;
-
 			if(isset($_POST['sellmenu']))
 			{
 				echo "
@@ -238,7 +233,6 @@
 		}
 	}
 }
-
 	if(isset($_POST['removeFromCart']))
 	{
 		$pid=$_POST['pid'];
@@ -254,7 +248,6 @@
 			";
 		}	
 	}
-
 	if(isset($_POST['updateProduct']))
 	{
 		$pid=$_POST['updateId'];
@@ -272,9 +265,7 @@
 				</div>
 			";
 		}
-
 	}
-
 	if(isset($_POST['sellcount'])){
 		if(!(isset($_SESSION['uid']))){echo "0";}else{
 		$uid=$_SESSION['uid'];
@@ -284,8 +275,6 @@
 		echo $count;
 		}
 	}
-
-
 	if(isset($_POST['payment_checkout'])){
 		$uid=$_SESSION['uid'];
 		$sql="SELECT * FROM sell WHERE user_id='$uid'";
@@ -297,7 +286,6 @@
 			$sell_prod_title=$sell_row['product_title'];
 			$sell_qty=$sell_row['qty'];
 			$sell_price_total=$sell_row['total_amount'];
-
 			$sql2="INSERT INTO customer_order (uid,pid,p_name,p_price,p_qty,p_status,tr_id) VALUES ('$uid','$sell_prod_id','$sell_prod_title','$sell_price_total','$sell_qty','CONFIRMED','$i')";
 			$run_query2=mysqli_query($conn,$sql2);
 		}
@@ -305,7 +293,6 @@
 		$sql3="DELETE FROM sell WHERE user_id='$uid'";
 		$run_query3=mysqli_query($conn,$sql3);
 	}
-
 	if(isset($_POST['product_detail'])){
 		$pid=$_POST['pid'];
 		$sql="SELECT * FROM products WHERE product_id='$pid'";
@@ -317,7 +304,6 @@
 		$price=$row['product_price'];
 		$desc=$row['product_desc'];
 		$tags=$row['product_keywords'];
-
 		echo "
 				<div class='row'>
 					<div class='col-md-6 pull-right'>
@@ -333,7 +319,6 @@
 				</div>
 		";
 	}
-
  ?>
 
  <script type="text/javascript">
@@ -345,9 +330,4 @@
  </script>
  <body>
  	
-
- 	</div>
- </body>
-
- 
 
